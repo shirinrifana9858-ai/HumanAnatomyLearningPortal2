@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Stomach</title>
+
+<link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">
+
+🩺 Human Anatomy Learning Portal
+
+</div>
+
+<ul>
+
+<li><a href="../index.html">Home</a></li>
+<li><a href="../anatomy.html">Anatomy</a></li>
+<li><a href="../about.html">About</a></li>
+<li><a href="../contact.html">Contact</a></li>
+
+</ul>
+
+</nav>
+
+<section class="hero reveal">
+
+<div class="hero-image">
+
+<img src="../images/stomach.jpg" alt="Stomach">
+
+</div>
+
+<div class="hero-text">
+
+<h1>🍽️ Stomach</h1>
+
+<p>
+
+The stomach is a muscular organ that stores food and helps digest it using powerful acids and digestive enzymes before passing it to the small intestine.
+
+</p>
+
+<a href="../anatomy.html" class="btn">
+
+⬅ Back to Anatomy
+
+</a>
+
+</div>
+
+</section>
+
+<section class="features reveal">
+
+<h2>Stomach Information</h2>
+
+<div class="cards">
+
+<div class="card reveal">
+
+<h3>📍 Location</h3>
+
+<p>
+
+Located in the upper left side of the abdomen, below the diaphragm.
+
+</p>
+
+</div>
+
+<div class="card reveal">
+
+<h3>⚙ Function</h3>
+
+<p>
+
+Stores food, mixes it with digestive juices, and begins the digestion process.
+
+</p>
+
+</div>
+
+<div class="card reveal">
+
+<h3>💡 Interesting Fact</h3>
+
+<p>
+
+The stomach produces a new protective lining every few days to prevent damage from its own acid.
+
+</p>
+
+</div>
+
+<div class="card reveal">
+
+<h3>🩺 Common Diseases</h3>
+
+<p>
+
+Gastritis<br>
+
+Stomach Ulcer<br>
+
+Stomach Cancer
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>
+
+© 2026 Human Anatomy Learning Portal
+
+</p>
+
+</footer>
+
+
+<script>
+const observer = new IntersectionObserver((entries)=>{entries.forEach((entry)=>{if(entry.isIntersecting) entry.target.classList.add('show');});},{threshold:0.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+</script>
+</body>
+
+</html>

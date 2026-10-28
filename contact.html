@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contact Us</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+
+.contact-container{
+width:90%;
+max-width:1200px;
+margin:40px auto;
+}
+
+.contact-title{
+text-align:center;
+margin-bottom:40px;
+}
+
+.contact-title h1{
+font-size:42px;
+color:#0d6efd;
+}
+
+.contact-title p{
+font-size:18px;
+color:#555;
+}
+
+.contact-box{
+display:flex;
+justify-content:space-between;
+gap:40px;
+flex-wrap:wrap;
+}
+
+.contact-info,
+.contact-form{
+
+flex:1;
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.15);
+
+}
+
+.contact-info h2,
+.contact-form h2{
+
+color:#0d6efd;
+margin-bottom:20px;
+
+}
+
+.info{
+
+margin-bottom:25px;
+font-size:18px;
+
+}
+
+.info span{
+
+font-size:30px;
+margin-right:10px;
+
+}
+
+.contact-form input,
+.contact-form textarea{
+
+width:100%;
+padding:15px;
+margin-bottom:20px;
+border-radius:10px;
+border:1px solid #ccc;
+font-size:16px;
+
+}
+
+.contact-form textarea{
+
+height:150px;
+resize:none;
+
+}
+
+.contact-form button{
+
+background:#0d6efd;
+color:white;
+padding:15px 30px;
+border:none;
+border-radius:10px;
+font-size:18px;
+cursor:pointer;
+
+}
+
+.contact-form button:hover{
+
+background:#084298;
+
+}
+
+.social{
+
+text-align:center;
+margin-top:50px;
+
+}
+
+.social h2{
+
+color:#0d6efd;
+
+}
+
+.social a{
+
+text-decoration:none;
+font-size:30px;
+margin:15px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">
+🩺 Human Anatomy Learning Portal
+</div>
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+<li><a href="anatomy.html">Anatomy</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="register.html">Register</a></li>
+<li><a href="login.html">Login</a></li>
+<li><a href="contact.html">Contact</a></li>
+
+</ul>
+
+</nav>
+
+<div class="contact-container">
+
+<div class="contact-title">
+
+<h1>Contact Us</h1>
+
+<p>
+We are happy to answer your questions and receive your valuable feedback.
+</p>
+
+</div>
+
+<div class="contact-box">
+
+<div class="contact-info">
+
+<h2>Contact Information</h2>
+
+<div class="info">
+<span>📍</span>
+Mount Zion College of Engineering and Technology
+</div>
+
+<div class="info">
+<span>📧</span>
+support@anatomylearning.com
+</div>
+
+<div class="info">
+<span>📞</span>
++91 98765 43210
+</div>
+
+<div class="info">
+<span>🕒</span>
+Monday - Friday <br>
+9:00 AM - 5:00 PM
+</div>
+
+</div>
+
+<div class="contact-form">
+
+<h2>Send Message</h2>
+
+<form>
+
+<input type="text" placeholder="Full Name" required>
+
+<input type="email" placeholder="Email Address" required>
+
+<input type="text" placeholder="Subject" required>
+
+<textarea placeholder="Write your message here..." required></textarea>
+
+<button type="submit">
+Send Message
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+<div class="social">
+
+<h2>Follow Us</h2>
+
+<a href="#">📘</a>
+<a href="#">📷</a>
+<a href="#">🐦</a>
+<a href="#">▶️</a>
+
+</div>
+
+</div>
+
+<footer>
+
+<p>
+
+© 2026 Human Anatomy Learning Portal | All Rights Reserved
+
+</p>
+
+</footer>
+
+
+<script>
+const observer = new IntersectionObserver((entries)=>{entries.forEach((entry)=>{if(entry.isIntersecting) entry.target.classList.add('show');});},{threshold:0.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+</script>
+</body>
+
+</html>

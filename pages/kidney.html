@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Kidney</title>
+
+<link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">
+
+🩺 Human Anatomy Learning Portal
+
+</div>
+
+<ul>
+
+<li><a href="../index.html">Home</a></li>
+<li><a href="../anatomy.html">Anatomy</a></li>
+<li><a href="../about.html">About</a></li>
+<li><a href="../contact.html">Contact</a></li>
+
+</ul>
+
+</nav>
+
+<section class="hero reveal">
+
+<div class="hero-image">
+
+<img src="../images/kidney.jpg" alt="Kidney">
+
+</div>
+
+<div class="hero-text">
+
+<h1>🫘 Kidney</h1>
+
+<p>
+
+The kidneys are two bean-shaped organs that filter waste and excess water from the blood. They help maintain the body's fluid balance and produce urine.
+
+</p>
+
+<a href="../anatomy.html" class="btn">
+
+⬅ Back to Anatomy
+
+</a>
+
+</div>
+
+</section>
+
+<section class="features reveal">
+
+<h2>Kidney Information</h2>
+
+<div class="cards">
+
+<div class="card reveal">
+
+<h3>📍 Location</h3>
+
+<p>
+
+Located on both sides of the spine, below the rib cage.
+
+</p>
+
+</div>
+
+<div class="card reveal">
+
+<h3>⚙ Function</h3>
+
+<p>
+
+Filters blood, removes waste, balances body fluids, and produces urine.
+
+</p>
+
+</div>
+
+<div class="card reveal">
+
+<h3>💡 Interesting Fact</h3>
+
+<p>
+
+Your kidneys filter about 50 gallons (around 180 liters) of blood every day.
+
+</p>
+
+</div>
+
+<div class="card reveal">
+
+<h3>🩺 Common Diseases</h3>
+
+<p>
+
+Kidney Stones<br>
+
+Chronic Kidney Disease<br>
+
+Kidney Infection
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>
+
+© 2026 Human Anatomy Learning Portal
+
+</p>
+
+</footer>
+
+
+<script>
+const observer = new IntersectionObserver((entries)=>{entries.forEach((entry)=>{if(entry.isIntersecting) entry.target.classList.add('show');});},{threshold:0.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+</script>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login | Human Anatomy Learning Portal</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<style>
+.login-page{min-height:calc(100vh - 80px);display:flex;align-items:center;justify-content:center;padding:65px 6%;position:relative;overflow:hidden}
+.login-page:before,.login-page:after{content:"";position:absolute;border-radius:50%;filter:blur(4px);pointer-events:none}
+.login-page:before{width:420px;height:420px;background:rgba(20,207,220,.12);left:-170px;top:-100px;box-shadow:0 0 120px rgba(20,207,220,.18)}
+.login-page:after{width:360px;height:360px;background:rgba(123,86,255,.14);right:-120px;bottom:-100px;box-shadow:0 0 120px rgba(123,86,255,.18)}
+.login-card{width:min(1050px,100%);display:grid;grid-template-columns:43% 57%;position:relative;z-index:2;border:1px solid rgba(255,255,255,.14);border-radius:30px;overflow:hidden;background:rgba(7,25,35,.68);box-shadow:0 28px 80px rgba(0,0,0,.42);backdrop-filter:blur(18px);animation:cardIn .7s ease}
+.login-side{padding:55px 45px;background:linear-gradient(145deg,rgba(19,184,202,.18),rgba(105,89,233,.2));border-right:1px solid rgba(255,255,255,.1);display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden}
+.login-side:after{content:"🫀";position:absolute;font-size:190px;right:-45px;bottom:-50px;opacity:.07;transform:rotate(-12deg)}
+.brand-icon{width:76px;height:76px;border-radius:22px;display:grid;place-items:center;font-size:34px;background:rgba(255,255,255,.11);border:1px solid rgba(255,255,255,.2);box-shadow:0 12px 35px rgba(0,0,0,.18);margin-bottom:25px}
+.login-side .eyebrow{margin-bottom:10px}.login-side h1{font-size:42px;line-height:1.15;color:#fff;margin-bottom:16px}.login-side h1 span{color:#70eaf2}.login-side p{color:#c6d9e5;font-size:17px;line-height:1.8;position:relative;z-index:2}.study-points{list-style:none;margin-top:25px;display:grid;gap:13px;position:relative;z-index:2}.study-points li{color:#e8f7fb;font-size:15px;display:flex;gap:10px;align-items:center}.study-points i{color:#70eaf2}
+.login-form-area{padding:50px 55px}.form-heading{margin-bottom:28px}.form-heading h2{color:#fff;font-size:32px;margin-bottom:6px}.form-heading p{color:#abc3cf;font-size:16px}.modern-input{position:relative;margin-bottom:20px}.modern-input i.input-icon{position:absolute;left:17px;top:50%;transform:translateY(-50%);color:#70eaf2;font-size:17px;z-index:2}.modern-input input{width:100%;height:58px;padding:0 52px;background:rgba(2,15,23,.55);border:1px solid rgba(255,255,255,.16);border-radius:14px;color:#fff;font-size:17px;outline:none;transition:.3s}.modern-input input::placeholder{color:#8fa9b6}.modern-input input:focus{border-color:#70eaf2;box-shadow:0 0 0 4px rgba(112,234,242,.1),0 8px 25px rgba(0,0,0,.12)}.toggle-pass{position:absolute;right:15px;top:50%;transform:translateY(-50%);background:none;border:0;color:#8fa9b6;cursor:pointer;font-size:16px;padding:7px}.toggle-pass:hover{color:#70eaf2}.form-row{display:flex;justify-content:space-between;align-items:center;margin:2px 0 25px;color:#a9c0cb;font-size:14px}.remember{display:flex;align-items:center;gap:8px;cursor:pointer}.remember input{accent-color:#16b8ca;width:16px;height:16px}.forgot{color:#70eaf2;text-decoration:none;font-weight:600}.forgot:hover{text-decoration:underline}.login-main-btn{width:100%;height:58px;border:0;border-radius:14px;background:linear-gradient(135deg,#13b8ca,#6959e9);color:#fff;font-size:18px;font-weight:800;cursor:pointer;box-shadow:0 12px 28px rgba(31,191,210,.2);transition:.3s}.login-main-btn:hover{transform:translateY(-3px);box-shadow:0 17px 35px rgba(31,191,210,.3)}.divider{display:flex;align-items:center;gap:12px;color:#75909e;font-size:13px;margin:25px 0}.divider:before,.divider:after{content:"";height:1px;flex:1;background:rgba(255,255,255,.1)}.register-link{text-align:center;color:#a9c0cb;font-size:15px}.register-link a{color:#70eaf2;text-decoration:none;font-weight:800}.register-link a:hover{text-decoration:underline}.login-message{margin-top:18px;padding:11px 14px;border-radius:10px;text-align:center;font-size:14px;display:none}.login-message.success{display:block;background:rgba(30,190,150,.12);border:1px solid rgba(30,220,170,.25);color:#8ff1d3}.reveal-login{opacity:0;transform:translateY(18px);animation:rise .65s .12s forwards}
+@keyframes cardIn{from{opacity:0;transform:translateY(25px) scale(.98)}to{opacity:1;transform:none}}@keyframes rise{to{opacity:1;transform:none}}
+@media(max-width:800px){.login-card{grid-template-columns:1fr}.login-side{padding:35px}.login-side h1{font-size:34px}.login-form-area{padding:35px 28px}.login-side{border-right:0;border-bottom:1px solid rgba(255,255,255,.1)}}
+@media(max-width:500px){.login-page{padding:35px 4%}.login-side{padding:30px 24px}.login-form-area{padding:30px 20px}.login-side h1{font-size:30px}.form-heading h2{font-size:27px}.form-row{gap:10px;align-items:flex-start;flex-direction:column}}
+</style>
+</head>
+<body>
+<nav>
+<div class="logo">🩺 Human Anatomy Learning Portal</div>
+<ul>
+<li><a href="index.html">Home</a></li><li><a href="anatomy.html">Anatomy</a></li><li><a href="about.html">About</a></li><li><a href="register.html">Register</a></li><li><a href="login.html">Login</a></li><li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+
+<main class="login-page">
+<section class="login-card">
+<div class="login-side">
+<div class="brand-icon">🧠</div>
+<span class="eyebrow">WELCOME BACK</span>
+<h1>Continue your <span>learning</span> journey.</h1>
+<p>Sign in to explore the human body through interactive anatomy lessons and visual learning.</p>
+<ul class="study-points">
+<li><i class="fa-solid fa-circle-check"></i> Interactive organ exploration</li>
+<li><i class="fa-solid fa-circle-check"></i> Simple student-friendly content</li>
+<li><i class="fa-solid fa-circle-check"></i> Learn anytime, anywhere</li>
+</ul>
+</div>
+
+<div class="login-form-area reveal-login">
+<div class="form-heading"><h2>Sign In</h2><p>Enter your account details to continue.</p></div>
+<form id="loginForm">
+<div class="modern-input"><i class="fa-solid fa-user input-icon"></i><input type="text" id="username" placeholder="Username" autocomplete="username" required></div>
+<div class="modern-input"><i class="fa-solid fa-lock input-icon"></i><input type="password" id="password" placeholder="Password" autocomplete="current-password" required><button class="toggle-pass" type="button" id="togglePassword" aria-label="Show password"><i class="fa-solid fa-eye"></i></button></div>
+<div class="form-row"><label class="remember"><input type="checkbox"> Remember me</label><a class="forgot" href="#" onclick="alert('Please contact your administrator to reset your password.');return false;">Forgot password?</a></div>
+<button class="login-main-btn" type="submit"><i class="fa-solid fa-right-to-bracket"></i> &nbsp;Login to Portal</button>
+<div class="login-message" id="loginMessage"></div>
+</form>
+<div class="divider">NEW TO THE PORTAL?</div>
+<div class="register-link">Create your account &nbsp;→&nbsp; <a href="register.html">Register Now</a></div>
+</div>
+</section>
+</main>
+<footer><p>© 2026 Human Anatomy Learning Portal | All Rights Reserved</p></footer>
+<script>
+const toggle=document.getElementById('togglePassword');
+toggle.addEventListener('click',()=>{const input=document.getElementById('password');const icon=toggle.querySelector('i');const show=input.type==='password';input.type=show?'text':'password';icon.className=show?'fa-solid fa-eye-slash':'fa-solid fa-eye';toggle.setAttribute('aria-label',show?'Hide password':'Show password');});
+document.getElementById('loginForm').addEventListener('submit',(e)=>{e.preventDefault();const msg=document.getElementById('loginMessage');msg.textContent='Login details entered successfully. Welcome to the learning portal!';msg.className='login-message success';});
+</script>
+</body>
+</html>

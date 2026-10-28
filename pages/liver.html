@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Liver</title>
+
+<link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">
+
+🩺 Human Anatomy Learning Portal
+
+</div>
+
+<ul>
+
+<li><a href="../index.html">Home</a></li>
+<li><a href="../anatomy.html">Anatomy</a></li>
+<li><a href="../about.html">About</a></li>
+<li><a href="../contact.html">Contact</a></li>
+
+</ul>
+
+</nav>
+
+<section class="hero reveal">
+
+<div class="hero-image">
+
+<img src="../images/liver.jpg" alt="Liver">
+
+</div>
+
+<div class="hero-text">
+
+<h1>🟤 Liver</h1>
+
+<p>
+
+The liver is the largest internal organ in the human body. It removes toxins, stores nutrients, produces bile for digestion, and helps regulate metabolism.
+
+</p>
+
+<a href="../anatomy.html" class="btn">
+
+⬅ Back to Anatomy
+
+</a>
+
+</div>
+
+</section>
+
+<section class="features reveal">
+
+<h2>Liver Information</h2>
+
+<div class="cards">
+
+<div class="card reveal">
+
+<h3>📍 Location</h3>
+
+<p>
+
+Located in the upper right side of the abdomen below the diaphragm.
+
+</p>
+
+</div>
+
+<div class="card reveal">
+
+<h3>⚙ Function</h3>
+
+<p>
+
+Filters blood, removes toxins, produces bile, and stores vitamins and energy.
+
+</p>
+
+</div>
+
+<div class="card reveal">
+
+<h3>💡 Interesting Fact</h3>
+
+<p>
+
+The liver is the only internal organ that can regenerate itself after injury.
+
+</p>
+
+</div>
+
+<div class="card reveal">
+
+<h3>🩺 Common Diseases</h3>
+
+<p>
+
+Fatty Liver Disease<br>
+
+Hepatitis<br>
+
+Liver Cirrhosis
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>
+
+© 2026 Human Anatomy Learning Portal
+
+</p>
+
+</footer>
+
+
+<script>
+const observer = new IntersectionObserver((entries)=>{entries.forEach((entry)=>{if(entry.isIntersecting) entry.target.classList.add('show');});},{threshold:0.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+</script>
+</body>
+
+</html>

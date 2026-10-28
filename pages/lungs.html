@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Lungs</title>
+
+<link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">
+
+🩺 Human Anatomy Learning Portal
+
+</div>
+
+<ul>
+
+<li><a href="../index.html">Home</a></li>
+<li><a href="../anatomy.html">Anatomy</a></li>
+<li><a href="../about.html">About</a></li>
+<li><a href="../contact.html">Contact</a></li>
+
+</ul>
+
+</nav>
+
+<section class="hero reveal">
+
+<div class="hero-image">
+
+<img src="../images/lungs.png.jpg" alt="Lungs">
+
+</div>
+
+<div class="hero-text">
+
+<h1>🫁 Lungs</h1>
+
+<p>
+
+The lungs are the main organs of the respiratory system. They absorb oxygen from the air and remove carbon dioxide from the body during breathing.
+
+</p>
+
+<a href="../anatomy.html" class="btn">
+
+⬅ Back to Anatomy
+
+</a>
+
+</div>
+
+</section>
+
+<section class="features reveal">
+
+<h2>Lungs Information</h2>
+
+<div class="cards">
+
+<div class="card reveal">
+
+<h3>📍 Location</h3>
+
+<p>
+
+Located inside the chest on both sides of the heart.
+
+</p>
+
+</div>
+
+<div class="card reveal">
+
+<h3>⚙ Function</h3>
+
+<p>
+
+Supplies oxygen to the blood and removes carbon dioxide from the body.
+
+</p>
+
+</div>
+
+<div class="card reveal">
+
+<h3>💡 Interesting Fact</h3>
+
+<p>
+
+An adult breathes about 20,000 times every day.
+
+</p>
+
+</div>
+
+<div class="card reveal">
+
+<h3>🩺 Common Diseases</h3>
+
+<p>
+
+Asthma<br>
+
+Pneumonia<br>
+
+Lung Cancer
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>
+
+© 2026 Human Anatomy Learning Portal
+
+</p>
+
+</footer>
+
+
+<script>
+const observer = new IntersectionObserver((entries)=>{entries.forEach((entry)=>{if(entry.isIntersecting) entry.target.classList.add('show');});},{threshold:0.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+</script>
+</body>
+
+</html>

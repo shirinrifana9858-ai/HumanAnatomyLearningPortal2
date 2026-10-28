@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Register | Human Anatomy Learning Portal</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<style>
+.register-page{min-height:calc(100vh - 80px);padding:55px 6%;display:flex;justify-content:center;position:relative;overflow:hidden}.register-page:before,.register-page:after{content:"";position:absolute;border-radius:50%;filter:blur(5px);pointer-events:none}.register-page:before{width:460px;height:460px;background:rgba(20,207,220,.11);left:-190px;top:20px;box-shadow:0 0 130px rgba(20,207,220,.16)}.register-page:after{width:430px;height:430px;background:rgba(123,86,255,.12);right:-180px;bottom:-120px;box-shadow:0 0 130px rgba(123,86,255,.16)}
+.register-card{width:min(1120px,100%);display:grid;grid-template-columns:32% 68%;background:rgba(7,25,35,.7);border:1px solid rgba(255,255,255,.14);border-radius:30px;overflow:hidden;box-shadow:0 28px 80px rgba(0,0,0,.42);backdrop-filter:blur(18px);position:relative;z-index:2;animation:regIn .7s ease}.register-side{padding:48px 36px;background:linear-gradient(145deg,rgba(19,184,202,.17),rgba(105,89,233,.2));border-right:1px solid rgba(255,255,255,.1);position:relative;overflow:hidden}.register-side:after{content:"🫁";position:absolute;font-size:200px;right:-60px;bottom:-55px;opacity:.065;transform:rotate(8deg)}.step-title{color:#fff;font-size:30px;line-height:1.2;margin:12px 0}.step-text{color:#bdd3de;font-size:16px;line-height:1.75}.progress-line{height:3px;background:rgba(255,255,255,.12);margin:28px 0;position:relative}.progress-line span{position:absolute;left:0;top:0;height:100%;width:100%;background:linear-gradient(90deg,#13b8ca,#6959e9);border-radius:3px}.benefits{list-style:none;display:grid;gap:17px;margin-top:30px}.benefits li{display:flex;gap:12px;color:#e9f7fb;font-size:15px;line-height:1.5}.benefits i{color:#70eaf2;margin-top:3px}.form-area{padding:45px 48px}.form-title h1{font-size:34px;color:#fff;margin-bottom:5px}.form-title p{color:#a9c0cb;font-size:16px;margin-bottom:28px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px 20px}.field label{display:block;color:#eaf7ff;font-weight:700;font-size:15px;margin:0 0 8px 3px}.field.full{grid-column:1/-1}.field-wrap{position:relative}.field-wrap i{position:absolute;left:15px;top:50%;transform:translateY(-50%);color:#70eaf2;z-index:2}.field input,.field select{width:100%;height:54px;background:rgba(2,15,23,.55);border:1px solid rgba(255,255,255,.16);border-radius:13px;color:#fff;padding:0 15px 0 44px;font-size:16px;outline:none;transition:.3s}.field select{padding-left:44px}.field input::placeholder{color:#8fa9b6}.field input:focus,.field select:focus{border-color:#70eaf2;box-shadow:0 0 0 4px rgba(112,234,242,.1)}.field select option{background:#0b2635;color:#fff}.password-note{color:#8199a5;font-size:12px;margin-top:5px}.gender-box{display:flex;align-items:center;gap:22px;height:54px;padding-left:4px}.radio{display:flex;align-items:center;gap:7px;color:#cce0e8;font-size:15px;cursor:pointer}.radio input{accent-color:#13b8ca;width:17px;height:17px}.check-row{grid-column:1/-1;margin-top:2px}.check-label{display:flex;align-items:flex-start;gap:10px;color:#b9ced8;font-size:14px;line-height:1.5;cursor:pointer}.check-label input{accent-color:#13b8ca;width:17px;height:17px;margin-top:2px}.check-label a{color:#70eaf2;text-decoration:none}.form-buttons{grid-column:1/-1;display:flex;gap:14px;margin-top:6px}.form-buttons button{height:56px;border:0;border-radius:13px;font-size:17px;font-weight:800;cursor:pointer;transition:.3s}.submit-btn{flex:1;background:linear-gradient(135deg,#13b8ca,#6959e9);color:#fff;box-shadow:0 12px 28px rgba(31,191,210,.2)}.reset-btn{width:150px;background:rgba(255,255,255,.08);color:#eaf7ff;border:1px solid rgba(255,255,255,.16)!important}.form-buttons button:hover{transform:translateY(-3px)}.form-buttons .submit-btn:hover{box-shadow:0 17px 35px rgba(31,191,210,.3)}.login-bottom{grid-column:1/-1;text-align:center;color:#8fa9b6;font-size:14px;margin-top:-2px}.login-bottom a{color:#70eaf2;text-decoration:none;font-weight:800}.register-message{display:none;grid-column:1/-1;padding:12px 15px;border-radius:10px;text-align:center;font-size:14px}.register-message.show{display:block;background:rgba(30,190,150,.12);border:1px solid rgba(30,220,170,.25);color:#8ff1d3}
+@keyframes regIn{from{opacity:0;transform:translateY(25px) scale(.98)}to{opacity:1;transform:none}}
+@media(max-width:900px){.register-card{grid-template-columns:1fr}.register-side{border-right:0;border-bottom:1px solid rgba(255,255,255,.1);padding:35px}.form-area{padding:35px 30px}.benefits{grid-template-columns:1fr 1fr}}
+@media(max-width:650px){.register-page{padding:35px 4%}.register-side{padding:30px 24px}.form-area{padding:30px 20px}.form-grid{grid-template-columns:1fr}.field.full,.check-row,.form-buttons,.login-bottom,.register-message{grid-column:auto}.benefits{grid-template-columns:1fr}.form-buttons{flex-direction:column}.reset-btn{width:100%}.form-title h1{font-size:28px}}
+</style>
+</head>
+<body>
+<nav>
+<div class="logo">🩺 Human Anatomy Learning Portal</div>
+<ul>
+<li><a href="index.html">Home</a></li><li><a href="anatomy.html">Anatomy</a></li><li><a href="about.html">About</a></li><li><a href="register.html">Register</a></li><li><a href="login.html">Login</a></li><li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+
+<main class="register-page">
+<section class="register-card">
+<aside class="register-side">
+<span class="eyebrow">JOIN THE PORTAL</span>
+<h2 class="step-title">Create your student profile.</h2>
+<p class="step-text">Register once and get ready to explore anatomy in a simple, visual and interactive way.</p>
+<div class="progress-line"><span></span></div>
+<ul class="benefits">
+<li><i class="fa-solid fa-user-graduate"></i><span>Student-friendly learning experience</span></li>
+<li><i class="fa-solid fa-brain"></i><span>Explore major human organs</span></li>
+<li><i class="fa-solid fa-hand-pointer"></i><span>Interactive anatomy hotspots</span></li>
+<li><i class="fa-solid fa-mobile-screen-button"></i><span>Responsive on phone and desktop</span></li>
+</ul>
+</aside>
+
+<div class="form-area">
+<div class="form-title"><h1><i class="fa-solid fa-user-plus"></i> Student Registration</h1><p>Fill in your details to create your learning account.</p></div>
+<form id="regForm" class="form-grid">
+<div class="field"><label for="name">Full Name</label><div class="field-wrap"><i class="fa-solid fa-user"></i><input id="name" type="text" placeholder="Enter your full name" required></div></div>
+<div class="field"><label for="regno">Register Number</label><div class="field-wrap"><i class="fa-solid fa-id-card"></i><input id="regno" type="text" placeholder="Enter register number" required></div></div>
+<div class="field"><label for="department">Department</label><div class="field-wrap"><i class="fa-solid fa-building-columns"></i><select id="department" required><option value="">Select department</option><option>CSE</option><option>ECE</option><option>EEE</option><option>MECH</option><option>CIVIL</option></select></div></div>
+<div class="field"><label for="email">Email Address</label><div class="field-wrap"><i class="fa-solid fa-envelope"></i><input id="email" type="email" placeholder="example@email.com" required></div></div>
+<div class="field"><label for="mobile">Mobile Number</label><div class="field-wrap"><i class="fa-solid fa-phone"></i><input id="mobile" type="tel" inputmode="numeric" maxlength="10" placeholder="10-digit mobile number" required></div></div>
+<div class="field"><label>Gender</label><div class="gender-box"><label class="radio"><input type="radio" name="gender" value="Male" required> Male</label><label class="radio"><input type="radio" name="gender" value="Female"> Female</label></div></div>
+<div class="field"><label for="dob">Date of Birth</label><div class="field-wrap"><i class="fa-solid fa-calendar"></i><input id="dob" type="date" required></div></div>
+<div class="field"><label for="password">Password</label><div class="field-wrap"><i class="fa-solid fa-lock"></i><input id="password" type="password" minlength="6" placeholder="Minimum 6 characters" required></div><div class="password-note">Use at least 6 characters.</div></div>
+<div class="field"><label for="confirm">Confirm Password</label><div class="field-wrap"><i class="fa-solid fa-shield-halved"></i><input id="confirm" type="password" minlength="6" placeholder="Re-enter password" required></div></div>
+<div class="check-row"><label class="check-label"><input id="terms" type="checkbox" required><span>I agree to the <a href="#" onclick="alert('Please use this portal for educational learning purposes.');return false;">Terms and Conditions</a>.</span></label></div>
+<div class="form-buttons"><button class="submit-btn" type="submit"><i class="fa-solid fa-user-check"></i> Create Account</button><button class="reset-btn" type="reset"><i class="fa-solid fa-rotate-left"></i> Reset</button></div>
+<div id="registerMessage" class="register-message"></div>
+<div class="login-bottom">Already have an account? <a href="login.html">Login here →</a></div>
+</form>
+</div>
+</section>
+</main>
+<footer><p>© 2026 Human Anatomy Learning Portal | All Rights Reserved</p></footer>
+<script>
+const form=document.getElementById('regForm');
+const mobile=document.getElementById('mobile');
+mobile.addEventListener('input',()=>mobile.value=mobile.value.replace(/\D/g,'').slice(0,10));
+form.addEventListener('submit',(e)=>{e.preventDefault();const pass=document.getElementById('password').value;const confirm=document.getElementById('confirm').value;const msg=document.getElementById('registerMessage');if(mobile.value.length!==10){mobile.focus();msg.textContent='Please enter a valid 10-digit mobile number.';msg.className='register-message show';return}if(pass!==confirm){document.getElementById('confirm').focus();msg.textContent='Password and Confirm Password do not match.';msg.className='register-message show';return}msg.textContent='Registration successful! Your student profile is ready.';msg.className='register-message show';});
+form.addEventListener('reset',()=>{setTimeout(()=>{document.getElementById('registerMessage').className='register-message';},0);});
+</script>
+</body>
+</html>

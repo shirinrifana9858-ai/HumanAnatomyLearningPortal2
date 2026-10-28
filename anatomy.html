@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Human Anatomy</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+<nav>
+    <div class="logo">🩺 Human Anatomy Learning Portal</div>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="anatomy.html">Anatomy</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="register.html">Register</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+</header>
+
+<main>
+<section class="features anatomy-section reveal">
+    <span class="eyebrow">INTERACTIVE ANATOMY</span>
+    <h1>Explore Human Anatomy</h1>
+    <p class="section-intro">Click the highlighted organ labels on the image to learn more.</p>
+
+    <div class="anatomy-wrap">
+        <div class="anatomy-image-box">
+            <img src="images/anatomy.png" usemap="#humanbody" class="anatomy-img" id="anatomyImage" alt="Interactive Human Anatomy">
+            <map name="humanbody" id="humanbody">
+                <!-- Coordinates are based on the 1536 × 1024 source image. -->
+                <area shape="circle" coords="318,175,58" href="pages/brain.html" alt="Brain" title="Brain">
+                <area shape="circle" coords="247,434,52" href="pages/lungs.html" alt="Lungs" title="Lungs">
+                <area shape="circle" coords="246,638,52" href="pages/liver.html" alt="Liver" title="Liver">
+                <area shape="circle" coords="1030,275,58" href="pages/heart.html" alt="Heart" title="Heart">
+                <area shape="circle" coords="1096,542,58" href="pages/stomach.html" alt="Stomach" title="Stomach">
+                <area shape="circle" coords="1098,719,58" href="pages/kidney.html" alt="Kidneys" title="Kidneys">
+            </map>
+            <a class="hotspot" style="left:20.7%;top:17.1%" href="pages/brain.html">🧠 Brain</a>
+            <a class="hotspot" style="left:16.1%;top:42.4%" href="pages/lungs.html">🫁 Lungs</a>
+            <a class="hotspot" style="left:16.0%;top:62.3%" href="pages/liver.html">🟤 Liver</a>
+            <a class="hotspot" style="left:67.1%;top:26.9%" href="pages/heart.html">❤️ Heart</a>
+            <a class="hotspot" style="left:71.4%;top:52.9%" href="pages/stomach.html">🍽️ Stomach</a>
+            <a class="hotspot" style="left:71.5%;top:70.2%" href="pages/kidney.html">🫘 Kidneys</a>
+        </div>
+        <div class="hotspot-help">
+            <span>●</span> Click an organ label to open its learning page
+        </div>
+    </div>
+</section>
+</main>
+
+<footer><p>© 2026 Human Anatomy Learning Portal</p></footer>
+
+<script>
+/* Keep the image map accurate when the anatomy image is resized. */
+(function () {
+    const image = document.getElementById('anatomyImage');
+    const map = document.getElementById('humanbody');
+    const areas = map.querySelectorAll('area');
+    const originalWidth = 1536;
+    const originalHeight = 1024;
+
+    function scaleMap() {
+        const scaleX = image.clientWidth / originalWidth;
+        const scaleY = image.clientHeight / originalHeight;
+        areas.forEach(area => {
+            const original = area.dataset.originalCoords || area.coords;
+            area.dataset.originalCoords = original;
+            const values = original.split(',').map(Number);
+            if (area.shape.toLowerCase() === 'circle') {
+                area.coords = [
+                    Math.round(values[0] * scaleX),
+                    Math.round(values[1] * scaleY),
+                    Math.round(values[2] * Math.min(scaleX, scaleY))
+                ].join(',');
+            }
+        });
+    }
+
+    if (image.complete) scaleMap();
+    image.addEventListener('load', scaleMap);
+    window.addEventListener('resize', scaleMap);
+})();
+</script>
+
+<script>
+const observer = new IntersectionObserver((entries)=>{entries.forEach((entry)=>{if(entry.isIntersecting) entry.target.classList.add('show');});},{threshold:0.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+</script>
+</body>
+</html>
